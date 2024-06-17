@@ -15,7 +15,7 @@ cd $(dirname $BASH_SOURCE)
 bin=G4CXTest
 
 #gdml=/path/to/some.gdml
-gdml=$HOME/.opticks/GEOM/V1J011/origin.gdml
+gdml=$HOME/.opticks/GEOM/XLZD/origin.gdml
 
 export GEOM=hello             # GEOM is identifier for a geometry 
 export hello_GDMLPath=$gdml   # associate a GDMLPath with that geometry 

@@ -99,6 +99,11 @@ esac
 
 origin=$HOME/.opticks/GEOM/$GEOM/origin.gdml    # path to GDML
 
+echo
+echo $origin
+echo
+echo
+
 vars="BASH_SOURCE arg SDIR GEOM FOLD bin geomscript script origin"
 
 if [ -f "$origin" ]; then
@@ -117,11 +122,11 @@ export GProperty_SIGINT=1
 #export BFile__preparePath_SIGINT=1
 #export GGeo__save_SIGINT=1
 
-#savedir=~/.opticks/GEOM/$GEOM
+savedir=~/.opticks/GEOM/$GEOM
 #savedir=/tmp/GEOM/$GEOM
-#export SAVEDIR=${SAVEDIR:-$savedir}
+export SAVEDIR=${SAVEDIR:-$savedir}
 
-export G4CXOpticks__setGeometry_saveGeometry=$FOLD
+export G4CXOpticks__setGeometry_saveGeometry=$SAVEDIR
 export G4CXOpticks__saveGeometry_saveGGeo=1
 
 #export NNodeNudger__DISABLE=1
@@ -145,6 +150,12 @@ loglevels(){
 }
 #loglevels
 env | grep =INFO
+
+echo
+echo '---------------'
+echo '---------------'
+echo $arg
+echo $script
 
 
 if [ "${arg/info}" != "$arg" ]; then 
