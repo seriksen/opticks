@@ -90,6 +90,7 @@ script=$SDIR/$bin.py
 
 export FOLD=/tmp/$USER/opticks/$bin
 mkdir -p $FOLD
+echo "FOLD: $FOLD"
 
 source $HOME/.opticks/GEOM/GEOM.sh   # mini config script that only sets GEOM envvar 
 

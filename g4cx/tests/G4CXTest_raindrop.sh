@@ -190,6 +190,10 @@ fi
 
 if [ "${arg/ana}" != "$arg" ]; then
     export SAVE_SEL=1
+
+    echo "AFOLD: $AFOLD"
+    echo "BFOLD: $BFOLD"
+
  
     ${IPYTHON:-ipython} --pdb -i $script 
     [ $? -ne 0 ] && echo $BASH_SOURCE : ana error with script $script && exit 4
